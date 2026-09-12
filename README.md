@@ -18,5 +18,5 @@ needed for branch publishing.
 
 The portal dashboards show example data; uploads and sending are disabled.
 Real AMS data, VATSIM authentication, chat and reminder emails require the
-backend. Event form preview mode currently supports local addresses only.
+backend. The Events page shows fictional sample events and an editable preview form. It never submits or saves events.
 Some staff links lead to the production website.

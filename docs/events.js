@@ -7,11 +7,11 @@
   const form = document.querySelector("#event-form");
   const submit = document.querySelector("#submit-button");
   const submission = document.querySelector("#submission-status");
-  const localPreview =
-    (location.protocol === "file:" ||
+  const localPreview = document.documentElement.dataset.staticPreview === "true" ||
+    ((location.protocol === "file:" ||
       ["localhost", "127.0.0.1", "[::1]"].includes(location.hostname) ||
       location.hostname.endsWith(".localhost")) &&
-    new URLSearchParams(location.search).get("live") !== "1";
+    new URLSearchParams(location.search).get("live") !== "1");
   if (localPreview) {
     document.querySelector("#event-access").textContent =
       "Local form preview — edit and try the fields without signing in. Nothing is submitted or saved.";
@@ -23,11 +23,22 @@
     form.hidden = false;
     submit.disabled = false;
     submit.textContent = "Check preview form";
-    status.textContent = "Local preview: live event listings are not loaded.";
+    status.textContent = "Website preview: fictional example events only. These are not scheduled VATSIM events.";
+    for (const [title, region, route] of [
+      ["Example Atlantic Group Flight", "Americas", "Boston to New York"],
+      ["Example European Evening", "EMEA", "Paris to Frankfurt"],
+      ["Example Pacific Fly-in", "APAC", "Sydney to Melbourne"],
+    ]) {
+      const card = node("article", "", "program-card");
+      card.append(node("p", "Example event", "eyebrow"), node("h3", title),
+        node("p", `${region} | ${route}`),
+        node("p", "Example Virtual Airline - date and time shown here when a real event is published."));
+      grid.append(card);
+    }
     grid.setAttribute("aria-busy", "false");
     refresh.disabled = true;
     more.hidden = true;
-    for (const link of document.querySelectorAll('a[href="/va-portal/events#submit-event"]'))
+    for (const link of document.querySelectorAll('main > .actions > a.button'))
       link.href = "#submit-event";
     form.addEventListener("submit", (event) => {
       event.preventDefault();
