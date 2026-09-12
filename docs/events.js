@@ -7,6 +7,7 @@
   const form = document.querySelector("#event-form");
   const submit = document.querySelector("#submit-button");
   const submission = document.querySelector("#submission-status");
+  form.addEventListener("reset", () => { submission.textContent = ""; });
   const localPreview = document.documentElement.dataset.staticPreview === "true" ||
     ((location.protocol === "file:" ||
       ["localhost", "127.0.0.1", "[::1]"].includes(location.hostname) ||
@@ -19,20 +20,32 @@
     airline.value = "preview-va";
     airline.textContent = "Example Virtual Airline (preview)";
     airline.selected = true;
+    airline.defaultSelected = true;
     form.elements.namedItem("partner_id").append(airline);
     form.hidden = false;
     submit.disabled = false;
-    submit.textContent = "Check preview form";
+    submit.textContent = "Submit";
     status.textContent = "Website preview: fictional example events only. These are not scheduled VATSIM events.";
-    for (const [title, region, route] of [
-      ["Example Atlantic Group Flight", "Americas", "Boston to New York"],
-      ["Example European Evening", "EMEA", "Paris to Frankfurt"],
-      ["Example Pacific Fly-in", "APAC", "Sydney to Melbourne"],
+    for (const [title, region, route, bannerFile, schedule, description] of [
+      ["Atlantic Group Flight", "Americas", "KBOS Boston to KJFK New York", "event-atlantic.svg", "Example schedule: 18:00 briefing / 18:30 departure / 20:00 finish UTC",
+        "Join Example Virtual Airline for a short East Coast group flight. Meet at Boston for a route briefing, then depart together for New York. Suitable for regional jets and narrow-body aircraft; allow approximately 60 minutes of flying time."],
+      ["European Evening", "EMEA", "LFPG Paris to EDDF Frankfurt", "event-europe.svg", "Example schedule: 17:30 briefing / 18:00 departure / 19:30 finish UTC",
+        "An evening hop connecting two European hubs. Review your aircraft performance and arrival charts before the group briefing. New and experienced pilots are welcome, with a suggested flight time of 75 minutes."],
+      ["Pacific Fly-in", "APAC", "YSSY Sydney to YMML Melbourne", "event-pacific.svg", "Example schedule: 08:00 briefing / 08:30 departure / 10:30 finish UTC",
+        "Explore Australia's southeast coast with a relaxed VA group flight. Prepare for a roughly 90-minute sector and coordinate your departure with the group. Bring a regional jet or airliner suitable for the route."],
     ]) {
-      const card = node("article", "", "program-card");
-      card.append(node("p", "Example event", "eyebrow"), node("h3", title),
+      const card = node("article", "", "partner-card event-card");
+      const banner = document.createElement("img");
+      banner.src = new URL(`./flask-static/${bannerFile}`, document.baseURI).href;
+      banner.alt = `${title} example event banner`;
+      banner.className = "event-banner";
+      banner.width = 960;
+      banner.height = 400;
+      banner.loading = "lazy";
+      card.append(banner, node("p", "Fictional example event", "eyebrow"), node("h3", title),
         node("p", `${region} | ${route}`),
-        node("p", "Example Virtual Airline - date and time shown here when a real event is published."));
+        node("p", "Hosted by Example Virtual Airline"), node("p", schedule, "event-time"),
+        node("p", description), node("p", "Preview only: no event date, booking or ATC coverage is confirmed."));
       grid.append(card);
     }
     grid.setAttribute("aria-busy", "false");
@@ -43,7 +56,7 @@
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       if (form.reportValidity())
-        submission.textContent = "Preview checked. No event has been submitted or saved.";
+        submission.textContent = "Preview submission complete. No event has been submitted or saved.";
     });
     return;
   }
@@ -212,8 +225,8 @@
         throw new Error(
           "The server did not confirm your submission. Please contact the department before retrying.",
         );
-      submission.textContent = `${result.message} Reference: ${result.id}`;
       form.reset();
+      submission.textContent = `${result.message} Reference: ${result.id}`;
     } catch (error) {
       submission.textContent =
         error.name === "AbortError"
