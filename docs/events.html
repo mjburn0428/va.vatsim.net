@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#020617" />
+    <meta
+      name="description"
+      content="Upcoming virtual airline events and event submissions for department review."
+    />
+    <title>Events | VATSIM Virtual Airlines Department</title>
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="canonical" href="https://va.vatsim.net/events.html" />
+    <link rel="stylesheet" href="./main.css" />
+    <script src="./events.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header>
+      <div class="container navigation">
+        <a
+          class="brand header-brand"
+          href="./index.html"
+          aria-label="VATSIM Virtual Airlines Department home"
+          ><img
+            src="./flask-static/department-logo-dark.png"
+            width="1079"
+            height="433"
+            alt="VATSIM Virtual Airlines Department"
+        /></a>
+        <nav aria-label="Main navigation">
+          <a href="./va-portal/index.html">VA Portal</a>
+          <a href="./audit-statistics.html">Audit statistics</a>
+          <a href="./events.html" aria-current="page">Events</a>
+          <a href="./index.html#directory">Our community</a
+          ><a href="./team.html">Meet the team</a
+          ><a href="./statistics.html">Statistics</a
+          ><a href="./index.html#join">Join the program</a>
+        <a href="https://va.vatsim.net/ams/admin/login">VA Dept Staff Login</a>
+        </nav>
+        <a class="button button-small" href="https://my.vatsim.net"
+          >myVATSIM ↗</a
+        >
+      </div>
+    </header>
+    <main id="main" class="container section statistics-page">
+      <p class="eyebrow">Fly together</p>
+      <h1>Community events.<br /><span>Your next departure.</span></h1>
+      <p class="statistics-description">
+        Discover upcoming virtual airline events on VATSIM, or share an event
+        from your VA with the community.
+      </p>
+      <div class="actions">
+        <a class="button" href="/va-portal/events#submit-event"
+          >Submit an event</a
+        ><button
+          id="refresh-events"
+          type="button"
+          class="button button-outline"
+        >
+          Refresh events
+        </button>
+      </div>
+      <section class="country-section" aria-labelledby="events-title">
+        <h2 id="events-title">Upcoming events</h2>
+        <p id="events-status" role="status">Loading events…</p>
+        <div id="events-grid" class="partner-grid" aria-busy="true"></div>
+        <button
+          id="more-events"
+          class="button button-small"
+          type="button"
+          hidden
+        >
+          Load more events
+        </button>
+      </section>
+      <section
+        id="submit-event"
+        class="country-section"
+        aria-labelledby="submit-title"
+      >
+        <p class="eyebrow">Bring your community along</p>
+        <div class="event-submit-heading">
+          <img
+            src="./flask-static/department-logo-dark.png"
+            width="1079"
+            height="433"
+            alt="VATSIM Virtual Airlines Department"
+            loading="lazy"
+          />
+          <h2 id="submit-title">Submit a VA event</h2>
+        </div>
+        <p class="statistics-description">
+          Submissions are reviewed by the department before publication. Enter
+          all times in UTC. Your contact email is used for event review and is
+          not displayed publicly.
+        </p>
+        <p class="required-note">
+          <span class="required-marker" aria-hidden="true">*</span> Required
+          fields
+        </p>
+        <div id="event-access" role="status">
+          Sign in through the <a href="./va-portal/index.html">VA Portal</a> to
+          submit an event.
+        </div>
+        <form
+          id="event-form"
+          class="event-form"
+          enctype="multipart/form-data"
+          hidden
+        >
+          <label
+            ><span
+              >Country / Division
+              <span class="required-marker" aria-hidden="true">*</span></span
+            >
+            <select name="country" required aria-describedby="country-help">
+              <option value="">Please Select</option>
+              <option value="EMEA - Europe (except UK)">
+                EMEA - Europe (except UK)
+              </option>
+              <option value="EMEA - United Kingdom">
+                EMEA - United Kingdom
+              </option>
+              <option value="EMEA - Israel (VATIL)">
+                EMEA - Israel (VATIL)
+              </option>
+              <option value="EMEA - Middle East and North Africa">
+                EMEA - Middle East and North Africa
+              </option>
+              <option value="EMEA - Russia">EMEA - Russia</option>
+              <option value="EMEA - Sub-Sahara Africa">
+                EMEA - Sub-Sahara Africa
+              </option>
+              <option value="Americas - Brazil">Americas - Brazil</option>
+              <option value="Americas - Central America">
+                Americas - Central America
+              </option>
+              <option value="Americas - Canada">Americas - Canada</option>
+              <option value="Americas - Caribbean">Americas - Caribbean</option>
+              <option value="Americas - Mexico">Americas - Mexico</option>
+              <option value="Americas - United States">
+                Americas - United States
+              </option>
+              <option value="Asia Pacific - Japan">Asia Pacific - Japan</option>
+              <option value="Asia Pacific - Korea">Asia Pacific - Korea</option>
+              <option value="Asia Pacific - New Zealand (VATNZ)">
+                Asia Pacific - New Zealand (VATNZ)
+              </option>
+              <option value="Asia Pacific - Australia (VATPAC)">
+                Asia Pacific - Australia (VATPAC)
+              </option>
+              <option value="Asia Pacific - People's Republic of China">
+                Asia Pacific - People's Republic of China
+              </option>
+              <option value="Asia Pacific - Republic of China (Taiwan)">
+                Asia Pacific - Republic of China (Taiwan)
+              </option>
+              <option value="Asia Pacific - Southeast Asia (VATSEA)">
+                Asia Pacific - Southeast Asia (VATSEA)
+              </option>
+              <option value="Asia Pacific - West Asia">
+                Asia Pacific - West Asia
+              </option>
+            </select>
+            <span id="country-help"
+              >Division in which the event is being held.</span
+            >
+          </label>
+          <label
+            ><span
+              >Region
+              <span class="required-marker" aria-hidden="true">*</span></span
+            >
+            <select name="region" required>
+              <option value="">Select a region</option>
+              <option value="Americas">Americas</option>
+              <option value="EMEA">EMEA</option>
+              <option value="APAC">APAC</option>
+            </select>
+          </label>
+          <label
+            >Event banner (optional)
+            <input
+              name="banner"
+              type="file"
+              accept="image/png,image/jpeg,image/webp"
+              aria-describedby="banner-help"
+            />
+            <span id="banner-help"
+              >PNG, JPEG or WebP, up to 5 MB and 20 megapixels. A wide image
+              works best.</span
+            >
+          </label>
+          <label
+            ><span
+              >Event title
+              <span class="required-marker" aria-hidden="true">*</span></span
+            ><input name="title" required maxlength="120" autocomplete="off"
+          /></label>
+          <label
+            ><span
+              >Virtual airline
+              <span class="required-marker" aria-hidden="true">*</span></span
+            ><select name="partner_id" required>
+              <option value="">Please select your VA</option>
+            </select></label
+          >
+          <label
+            ><span
+              >Start date and time (UTC)
+              <span class="required-marker" aria-hidden="true">*</span></span
+            ><input name="starts_at" type="datetime-local" required
+          /></label>
+          <label
+            ><span
+              >End date and time (UTC)
+              <span class="required-marker" aria-hidden="true">*</span></span
+            ><input name="ends_at" type="datetime-local" required
+          /></label>
+          <label
+            ><span
+              >Event details or signup URL
+              <span class="required-marker" aria-hidden="true">*</span></span
+            ><input
+              name="event_url"
+              type="url"
+              required
+              maxlength="500"
+              placeholder="https://"
+              autocomplete="url"
+          /></label>
+          <label
+            ><span
+              >Contact email (private)
+              <span class="required-marker" aria-hidden="true">*</span></span
+            ><input
+              name="contact_email"
+              type="email"
+              required
+              maxlength="254"
+              autocomplete="email"
+          /></label>
+          <label class="event-form-wide"
+            ><span
+              >Description
+              <span class="required-marker" aria-hidden="true">*</span></span
+            ><textarea
+              name="description"
+              required
+              maxlength="3000"
+              rows="6"
+              placeholder="Tell pilots about the route, meeting point, and how to take part."
+            ></textarea>
+          </label>
+          <div class="event-form-wide">
+            <button id="submit-button" class="button" type="submit" disabled>
+              Submit for review
+            </button>
+            <p id="submission-status" role="status"></p>
+          </div>
+        </form>
+      </section>
+      <noscript><p>Enable JavaScript to view and submit events.</p></noscript>
+    </main>
+    <footer class="container site-footer">
+      <div>
+        <a class="brand footer-brand" href="./index.html"
+          ><img
+            src="./flask-static/department-logo-dark.png"
+            width="1079"
+            height="433"
+            alt="VATSIM Virtual Airlines Department home"
+            loading="lazy"
+        /></a>
+        <p>Bringing virtual airlines together.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="./index.html">Home</a
+        ><a href="https://my.vatsim.net">Member portal</a
+        ><a href="https://va.vatsim.net/ams/admin/login">VA Dept Staff Login</a>
+      </nav>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#020617" />
+    <meta
+      name="description"
+      content="Meet the Administration Leadership, Senior Audit Managers and Audit Managers of the VATSIM Virtual Airlines Department."
+    />
+    <title>Department Team | VATSIM Virtual Airlines Department</title>
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="canonical" href="https://va.vatsim.net/team.html" />
+    <link rel="stylesheet" href="./main.css" />
+    <script src="./team-page.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header>
+      <div class="container navigation">
+        <a
+          class="brand header-brand"
+          href="./index.html"
+          aria-label="VATSIM Virtual Airlines Department home"
+          ><img
+            src="./flask-static/department-logo-dark.png"
+            width="1079"
+            height="433"
+            alt="VATSIM Virtual Airlines Department"
+        /></a>
+        <nav aria-label="Main navigation">
+          <a href="./va-portal/index.html">VA Portal</a>
+          <a href="./audit-statistics.html">Audit statistics</a>
+          <a href="./events.html">Events</a>
+          <a href="./index.html#directory">Our community</a
+          ><a href="./team.html" aria-current="page">Meet the team</a
+          ><a href="./statistics.html">Statistics</a
+          ><a href="./index.html#join">Join the program</a>
+        <a href="https://va.vatsim.net/ams/admin/login">VA Dept Staff Login</a>
+        </nav>
+        <a class="button button-small" href="https://my.vatsim.net"
+          >myVATSIM ↗</a
+        >
+      </div>
+    </header>
+    <main id="main" class="container section statistics-page">
+      <p class="eyebrow">The people behind the program</p>
+      <h1>Meet your department.<br /><span>Here for your community.</span></h1>
+      <p class="statistics-description">
+        Meet the people supporting our virtual airlines, guiding the program and
+        helping Partners and Associates through their audits.
+      </p>
+      <div class="actions" aria-label="Team sections">
+        <a class="button button-outline" href="#leadership"
+          >Administration Leadership</a
+        >
+        <a class="button button-outline" href="#senior-audit-managers"
+          >Senior Audit Managers</a
+        >
+        <a class="button button-outline" href="#audit-managers"
+          >Audit Managers</a
+        >
+      </div>
+      <div class="statistics-controls">
+        <p id="team-status" role="status">
+          Loading the department team from AMS…
+        </p>
+        <button id="refresh-team" class="button button-small" type="button">
+          Refresh team
+        </button>
+      </div>
+      <section
+        id="leadership"
+        class="country-section"
+        aria-labelledby="leadership-title"
+      >
+        <p class="eyebrow">Virtual Airlines Department</p>
+        <h2 id="leadership-title">Administration Leadership</h2>
+        <p>
+          Providing direction and oversight for the Virtual Airlines Department.
+        </p>
+        <div id="leadership-grid" class="team-role-list">
+          <section aria-labelledby="vice-president-title">
+            <h3 id="vice-president-title">Vice President</h3>
+            <div id="vice-president-grid" class="team-grid"></div>
+          </section>
+          <section aria-labelledby="director-title">
+            <h3 id="director-title">Director</h3>
+            <div id="director-grid" class="team-grid"></div>
+          </section>
+          <section aria-labelledby="assistant-director-title">
+            <h3 id="assistant-director-title">Assistant Director</h3>
+            <div id="assistant-director-grid" class="team-grid"></div>
+          </section>
+          <section aria-labelledby="training-coordinator-title">
+            <h3 id="training-coordinator-title">Training Coordinator</h3>
+            <div id="training-coordinator-grid" class="team-grid"></div>
+          </section>
+        </div>
+        <p id="leadership-empty" hidden>
+          No team members are currently listed in this section.
+        </p>
+      </section>
+      <section
+        id="senior-audit-managers"
+        class="country-section"
+        aria-labelledby="senior-audit-managers-title"
+      >
+        <p class="eyebrow">Virtual Airlines Department</p>
+        <h2 id="senior-audit-managers-title">Senior Audit Managers</h2>
+        <p>
+          Supporting the audit team and reviewing audits across the program.
+        </p>
+        <div id="senior-audit-managers-grid" class="team-grid"></div>
+        <p id="senior-audit-managers-empty" hidden>
+          No team members are currently listed in this section.
+        </p>
+      </section>
+      <section
+        id="audit-managers"
+        class="country-section"
+        aria-labelledby="audit-managers-title"
+      >
+        <p class="eyebrow">Virtual Airlines Department</p>
+        <h2 id="audit-managers-title">Audit Managers</h2>
+        <p>
+          Working with our Partners and Associates through the audit process.
+        </p>
+        <div id="audit-managers-grid" class="team-grid"></div>
+        <p id="audit-managers-empty" hidden>
+          No team members are currently listed in this section.
+        </p>
+      </section>
+      <noscript
+        ><p>Enable JavaScript to load team profiles from AMS.</p></noscript
+      >
+    </main>
+    <footer class="container site-footer">
+      <div>
+        <a class="brand footer-brand" href="./index.html"
+          ><img
+            src="./flask-static/department-logo-dark.png"
+            width="1079"
+            height="433"
+            alt="VATSIM Virtual Airlines Department home"
+            loading="lazy"
+        /></a>
+        <p>Bringing virtual airlines together.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="./index.html">Home</a
+        ><a href="https://my.vatsim.net">Member portal</a
+        ><a href="https://va.vatsim.net/ams/admin/login">VA Dept Staff Login</a>
+      </nav>
+    </footer>
+  </body>
+</html>
