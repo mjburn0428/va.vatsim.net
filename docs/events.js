@@ -239,7 +239,7 @@
       form.hidden = true;
       access.replaceChildren(node("p", error.message));
       const login = node("a", "Open VA Portal", "button");
-      login.href = "/va-portal/";
+      login.href = "./va-portal/index.html";
       access.append(login);
     }
   }
