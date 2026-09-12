@@ -128,7 +128,7 @@ header {
 }
 .header-brand img {
   display: block;
-  width: 230px;
+  width: 260px;
   height: auto;
   mix-blend-mode: lighten;
 }
@@ -758,7 +758,7 @@ h1 span {
     border-radius: 8px;
   }
   .header-brand img {
-    width: clamp(140px, 40vw, 180px);
+    width: clamp(160px, 44vw, 200px);
     height: auto;
   }
   .brand strong {
