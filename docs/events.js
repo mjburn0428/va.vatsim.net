@@ -9,6 +9,7 @@
   const submission = document.querySelector("#submission-status");
   form.addEventListener("reset", () => { submission.textContent = ""; });
   const localPreview = document.documentElement.dataset.staticPreview === "true" ||
+    location.hostname.endsWith(".github.io") ||
     ((location.protocol === "file:" ||
       ["localhost", "127.0.0.1", "[::1]"].includes(location.hostname) ||
       location.hostname.endsWith(".localhost")) &&
