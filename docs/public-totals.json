@@ -1,0 +1,341 @@
+{
+  "retrieved_at": "2026-09-21T23:49:21.948905+00:00",
+  "source": "AMS public directory",
+  "totals": {
+    "vap": 135,
+    "vaa": 26,
+    "disc": 2
+  },
+  "countries": [
+    {
+      "name": "0",
+      "vap": 4,
+      "vaa": 1,
+      "disc": 0
+    },
+    {
+      "name": "AE",
+      "vap": 3,
+      "vaa": 1,
+      "disc": 0
+    },
+    {
+      "name": "AR",
+      "vap": 3,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "AT",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "AU",
+      "vap": 4,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "BB",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "BO",
+      "vap": 0,
+      "vaa": 1,
+      "disc": 0
+    },
+    {
+      "name": "BR",
+      "vap": 2,
+      "vaa": 2,
+      "disc": 0
+    },
+    {
+      "name": "Brazil",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "CA",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "CH",
+      "vap": 2,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "CL",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "CN",
+      "vap": 7,
+      "vaa": 1,
+      "disc": 0
+    },
+    {
+      "name": "CO",
+      "vap": 3,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "CU",
+      "vap": 2,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "CZ",
+      "vap": 2,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "DE",
+      "vap": 11,
+      "vaa": 3,
+      "disc": 0
+    },
+    {
+      "name": "ES",
+      "vap": 6,
+      "vaa": 1,
+      "disc": 0
+    },
+    {
+      "name": "FR",
+      "vap": 5,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "GB",
+      "vap": 13,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "GE",
+      "vap": 0,
+      "vaa": 1,
+      "disc": 0
+    },
+    {
+      "name": "GG",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "GR",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "HK",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "HU",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "ID",
+      "vap": 2,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "IE",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "IL",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "IN",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "IR",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "IT",
+      "vap": 4,
+      "vaa": 3,
+      "disc": 0
+    },
+    {
+      "name": "JP",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "KE",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "LV",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "MA",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "MD",
+      "vap": 1,
+      "vaa": 1,
+      "disc": 0
+    },
+    {
+      "name": "MX",
+      "vap": 2,
+      "vaa": 0,
+      "disc": 1
+    },
+    {
+      "name": "MY",
+      "vap": 0,
+      "vaa": 1,
+      "disc": 0
+    },
+    {
+      "name": "NL",
+      "vap": 4,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "NO",
+      "vap": 2,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "PL",
+      "vap": 3,
+      "vaa": 2,
+      "disc": 0
+    },
+    {
+      "name": "PT",
+      "vap": 0,
+      "vaa": 1,
+      "disc": 0
+    },
+    {
+      "name": "QA",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "RO",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "RU",
+      "vap": 0,
+      "vaa": 2,
+      "disc": 1
+    },
+    {
+      "name": "SA",
+      "vap": 0,
+      "vaa": 1,
+      "disc": 0
+    },
+    {
+      "name": "SE",
+      "vap": 2,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "SK",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "SN",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "TR",
+      "vap": 2,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "TW",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "UA",
+      "vap": 1,
+      "vaa": 0,
+      "disc": 0
+    },
+    {
+      "name": "US",
+      "vap": 20,
+      "vaa": 3,
+      "disc": 0
+    },
+    {
+      "name": "VE",
+      "vap": 1,
+      "vaa": 1,
+      "disc": 0
+    },
+    {
+      "name": "ZA",
+      "vap": 2,
+      "vaa": 0,
+      "disc": 0
+    }
+  ]
+}

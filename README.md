@@ -20,3 +20,9 @@ The portal dashboards show example data; uploads and sending are disabled.
 Real AMS data, VATSIM authentication, chat and reminder emails require the
 backend. The Events page shows fictional sample events and an editable preview form. It never submits or saves events.
 Some staff links lead to the production website.
+
+## Public AMS count snapshots
+
+The homepage and statistics page show real public AMS counts for Partners, Associates and DOVA, plus country totals. The retrieval date is displayed. These are snapshots, not a live API connection. Refresh reloads the published file. No credentials or representative records are included.
+
+To update the counts, run `python flask/export_public_totals.py` in the application repository, copy `nginx/public-totals.json` into this repository's `docs/`, and commit the updated file. The application's website export also includes this snapshot.
