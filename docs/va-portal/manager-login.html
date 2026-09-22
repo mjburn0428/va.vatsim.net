@@ -7,29 +7,41 @@
     <title>VA Portal | VATSIM Virtual Airlines Department</title>
     <link rel="icon" href="../favicon.ico" />
     <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="../portal-login.css" />
     <script src="../portal-chat.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header><div class="container navigation">
-      <a class="brand header-brand" href="../index.html"><img src="../flask-static/department-logo-dark.png" width="1079" height="433" alt="VATSIM Virtual Airlines Department home" /></a>
-      <nav aria-label="Main navigation"><a href="../index.html">Home</a><a href="../events.html">Events</a><a href="../team.html">Meet the team</a><a href="./index.html" aria-current="page">VA Portal</a>
-        </nav>
-    </div></header>
-    <main id="main" class="container section statistics-page">
-
-      <aside class="country-section" aria-label="Design preview"><p><strong>Design preview</strong> · Example data only. Sign-in and event submissions require the running application.</p><nav class="actions" aria-label="Preview views"><a class="button button-outline" href="./index.html">Sign-in screen</a> <a class="button" href="./representative.html#your-audits">Partner preview</a> <a class="button" href="./associate.html#your-audits">Associate preview</a> <a class="button" href="./dova.html#your-audits">DOVA preview</a> <a class="button" href="./manager.html#assigned-audits">Audit Manager preview</a></nav></aside><p class="eyebrow">For VA representatives</p>
-      <h1>Audit Manager<br /><span>Portal</span></h1>
-      <p class="statistics-description">Open your assigned audits and talk directly with their VA representatives.</p>
-
-      <div class="actions"><a class="button button-outline" href="./index.html">VA Representative Portal</a><a class="button button-outline" href="./manager-login.html">Audit Manager Portal</a></div>
-
-
-
-        <p>Use the VATSIM account linked to your Audit Manager record in AMS. Only your current assignments are available after sign-in.</p><a class="button" href="./manager.html#assigned-audits">View Audit Manager preview</a>
-
-
-    </main>
-    <footer class="container site-footer"><a class="brand footer-brand" href="../index.html"><img src="../flask-static/department-logo-dark.png" width="1079" height="433" alt="VATSIM Virtual Airlines Department home" /></a><p>Bringing virtual airlines together.</p><nav aria-label="Staff access"><a href="https://va.vatsim.net/ams/admin/login">VA Dept Staff Login</a></nav></footer>
+    
+      <a class="skip-link" href="#main">Skip to sign in</a>
+<main id="main" class="portal-login-layout">
+  <section class="portal-login-panel" aria-labelledby="login-title">
+    <a class="portal-login-brand" href="../index.html" aria-label="VATSIM Virtual Airlines Department home">
+      <img src="../flask-static/department-logo-dark.png" width="1079" height="433" alt="VATSIM Virtual Airlines Department" />
+    </a>
+    <div class="portal-login-content">
+      <p class="eyebrow">Audit Manager Portal</p>
+      <h1 id="login-title">Welcome back.</h1>
+      <p class="portal-login-intro">Sign in to open your assigned audits and connect with VA representatives.</p>
+      
+      
+      <div class="portal-login-action">
+        <a class="button" href="./manager.html#assigned-audits">View Audit Manager preview</a>
+        
+      </div>
+      <p class="portal-login-help">Use the VATSIM account linked to your Audit Manager record in AMS.</p>
+      <div class="portal-login-support"><h2>Need access?</h2><p>Contact the <a href="../team.html">department team</a> to check your staff assignment.</p></div>
+      <details class="portal-login-preview"><summary>Sandbox preview views</summary><p>Example data only. VATSIM sign-in and saving are disabled in this preview.</p><nav aria-label="Preview views"><a href="./representative.html#your-audits">Partner</a><a href="./associate.html#your-audits">Associate</a><a href="./dova.html#your-audits">DOVA</a><a href="./manager.html#assigned-audits">Audit Manager</a></nav></details>
+    </div>
+    <footer class="portal-login-footer">
+      <a href="../index.html">Back to the website</a>
+      <a href="./index.html">VA Representative login</a>
+      <a href="https://va.vatsim.net/ams/admin/login">VA Dept Staff Login</a>
+    </footer>
+  </section>
+  <aside class="portal-login-visual" aria-label="Our virtual airline community">
+    <div class="portal-login-message"><p class="eyebrow">VATSIM Virtual Airlines Department</p><h2>A shared sky.<br />A connected community.</h2><p>Supporting our Partners, Associates and Discord-only Virtual Airlines, every step of the way.</p><div class="portal-login-topics"><span>Audit progress</span><span>Direct conversations</span><span>Community events</span></div></div>
+  </aside>
+</main>
+    
   </body>
 </html>
