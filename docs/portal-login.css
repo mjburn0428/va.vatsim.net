@@ -14,7 +14,7 @@
 .portal-login-support a, .portal-login-preview a { color: #7dd3fc; text-decoration: underline; text-underline-offset: 4px; }
 .portal-login-footer { display: flex; flex-wrap: wrap; gap: 14px 22px; font-size: .75rem; color: #a6b6cb; }
 .portal-login-footer a:hover { color: #7dd3fc; }
-.portal-login-visual { display: flex; align-items: flex-end; padding: clamp(32px, 6vw, 96px); background: linear-gradient(180deg, #02061712, #0206174d 35%, #020617f5), url('./flask-static/community-hero.png') center / cover; }
+.portal-login-visual { display: flex; align-items: flex-end; padding: clamp(32px, 6vw, 96px); background: linear-gradient(180deg, #02061712, #0206174d 35%, #020617f5), url('./flask-static/airliner-sunset.jpg') center 38% / cover; }
 .portal-login-message { max-width: 660px; }
 .portal-login-message h2 { font-size: clamp(2.5rem, 4.6vw, 5rem); line-height: 1.04; letter-spacing: -.055em; margin: 18px 0 24px; }
 .portal-login-message > p:not(.eyebrow) { max-width: 490px; line-height: 1.8; color: #cbd5e1; }

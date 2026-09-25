@@ -210,7 +210,7 @@ header {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url("./flask-static/community-hero.png") center 48% / cover
+  background: url("./flask-static/airliner-sunset.jpg") center 38% / cover
     no-repeat;
 }
 .hero::after {
@@ -715,7 +715,7 @@ h1 span {
     min-height: 620px;
   }
   .hero::before {
-    background-position: 60% center;
+    background-position: 60% 38%;
   }
   .hero-copy {
     max-width: 620px;
@@ -790,7 +790,7 @@ h1 span {
     padding: 90px 0 50px;
   }
   .hero::before {
-    background-position: 65% top;
+    background-position: 65% 38%;
   }
   .hero::after {
     background: linear-gradient(
